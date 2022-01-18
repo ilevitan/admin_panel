@@ -8,6 +8,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
+            {{-- <img src="http://pa1.narvii.com/7072/ffabc13a9b1ee6c7aa6e695b7470f620abfbab0fr1-320-183_00.gif" width="65px" height="30px" data-widget="pushmenu"  > --}}
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Главная</h1>

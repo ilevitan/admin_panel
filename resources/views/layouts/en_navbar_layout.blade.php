@@ -34,15 +34,14 @@
 <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
 <link href="/admin/dist/css/colorbox.css" rel="stylesheet">
 
-
        
     </head>
     <body class="antialiased">
 
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
-              <a href="{{ route('index') }}" class="navbar-brand">
-                   <span class="brand-text font-weight-light">Сайт </span>
+              <a href="{{ route('en') }}" class="navbar-brand">
+                   <span class="brand-text font-weight-light">Сайт En</span>
               </a>
         
               <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,99 +53,85 @@
                 <ul class="navbar-nav">
                    
                   <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Главная</a>
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
                       @foreach ($cat_id_1 as $cat_1)
-                      <li><a href="{{ route('page.show', $cat_1['id']) }}" class="dropdown-item">{{$cat_1['title']}} </a></li>
+                      <li><a href="{{ route('pageen.show', $cat_1['id']) }}" class="dropdown-item">{{$cat_1['title']}} </a></li>
                       @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Колледжа</a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_2 as $cat_2)
-                      <li><a href="{{ route('page.show', $cat_2['id']) }}" class="dropdown-item">{{$cat_2['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Абитуриентам </a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_3 as $cat_3)
-                      <li><a href="{{ route('page.show', $cat_3['id']) }}" class="dropdown-item">{{$cat_3['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Студентам </a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_4 as $cat_4)
-                      <li><a href="{{ route('page.show', $cat_4['id']) }}" class="dropdown-item">{{$cat_4['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Преподавателям</a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_5 as $cat_5)
-                      <li><a href="{{ route('page.show', $cat_5['id']) }}" class="dropdown-item">{{$cat_5['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Государство</a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_6 as $cat_6)
-                      <li><a href="{{ route('page.show', $cat_6['id']) }}" class="dropdown-item">{{$cat_6['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-        
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Контакты</a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                      @foreach ($cat_id_7 as $cat_7)
-                      <li><a href="{{ route('page.show', $cat_7['id']) }}" class="dropdown-item">{{$cat_7['title']}} </a></li>
-                      @endforeach
-                    
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Язык</a>
-                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                    
-                      <li><a href="{{ route('kz') }}" class="dropdown-item">kz</a></li>
-                      <li><a href="{{ route('en') }}" class="dropdown-item">en</a></li>
                       
                     </ul>
                   </li>
         
-                  {{-- <li class="nav-item">
-                    @if (Route::has('login'))
-              
-                        @auth
-                            <a href="{{ url('/home') }}" class="nav-link">Home</a>
-                        @else
-                            <a href="{{ route('login') }}" class="nav-link">Login</a>
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_2 as $cat_2)
+                      <li><a href="{{ route('pageen.show', $cat_2['id']) }}" class="dropdown-item">{{$cat_2['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_3 as $cat_3)
+                      <li><a href="{{ route('pageen.show', $cat_3['id']) }}" class="dropdown-item">{{$cat_3['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_4 as $cat_4)
+                      <li><a href="{{ route('pageen.show', $cat_4['id']) }}" class="dropdown-item">{{$cat_4['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_5 as $cat_5)
+                      <li><a href="{{ route('pageen.show', $cat_5['id']) }}" class="dropdown-item">{{$cat_5['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_6 as $cat_6)
+                      <li><a href="{{ route('pageen.show', $cat_6['id']) }}" class="dropdown-item">{{$cat_6['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                      @foreach ($cat_id_7 as $cat_7)
+                      <li><a href="{{ route('pageen.show', $cat_7['id']) }}" class="dropdown-item">{{$cat_7['title']}} </a></li>
+                      @endforeach
+                      
+                    </ul>
+                  </li>
+        
+                  <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Lang</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
                     
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="ml-4 nav-link">Register</a>
-                            @endif
-                        @endauth
+                      <li><a href="{{ route('index') }}" class="dropdown-item">ru</a></li>
+                      <li><a href="{{ route('kz') }}" class="dropdown-item">kz</a></li>
+                      
+                    </ul>
+                  </li>
                   
-                    @endif
-                  </li> --}}
                 </ul>
         
             

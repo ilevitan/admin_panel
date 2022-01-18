@@ -4,11 +4,13 @@
 
 
 @section('content')
+
+<h1 class=" text-center mt-5">{{ $posts['title'] }}</h1>
 <div class="text-center mt-5">
-    <img class="g img-fluid " src="{{ $posts['img'] }}" alt="User profile picture" width="400px" height="250px" style="object-fit:cover;">
+    <img class="g img-fluid " src="{{ $posts['img'] }}" alt="img" width="400px" height="250px" style="object-fit:cover;">
   </div>
 
-  <h3 class="profile-username text-center">{{ $posts['title'] }}</h3>
+  
 
 
   <div class=" text-center">
@@ -17,9 +19,7 @@
 
  
 
-<div class="text-center">
-<a href="{{ route('index') }}" class="text-bold text-primary" >Вернуться обратно</a>
-</div>
+
 
 
 @endsection

@@ -63,7 +63,7 @@
 
                         <li class="nav-item">
                             <a href="{{ route('homeAdmin') }}" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-rat"></i>
                                 <p>
                                     Главная
                                 </p>
@@ -71,9 +71,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-newspaper"></i>
+                                <i class="nav-icon fas fa-crow"></i>
                                 <p>
-                                    Блог
+                                    Русский
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -88,29 +88,121 @@
                                         <p>Добавить статью</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                      
+                                        <p>
+                                            Категории
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('category.index') }}" class="nav-link">
+                                                <p>Все категории</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('category.create') }}" class="nav-link">
+                                                <p>Добавить категорию</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
+                    
+
+                       
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-align-left"></i>
+                                <i class="nav-icon fas fa-dove"></i>
                                 <p>
-                                    Категории
+                                   Казахский
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('category.index') }}" class="nav-link">
-                                        <p>Все категории</p>
+                                    <a href="{{ route('postkz.index') }}" class="nav-link">
+                                        <p>Все страницы</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('category.create') }}" class="nav-link">
-                                        <p>Добавить категорию</p>
+                                    <a href="{{ route('postkz.create') }}" class="nav-link">
+                                        <p>Добавить страницу</p>
                                     </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                       
+                                        <p>
+                                            Категории Kz
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('categorykz.index') }}" class="nav-link">
+                                                <p>Все категории</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('categorykz.create') }}" class="nav-link">
+                                                <p>Добавить категорию</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
+
+                      
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-fish"></i>
+                                <p>
+                                   Английский
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('posten.index') }}" class="nav-link">
+                                        <p>Все страницы</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('posten.create') }}" class="nav-link">
+                                        <p>Добавить страницу</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                       
+                                        <p>
+                                            Категории En
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('categoryen.index') }}" class="nav-link">
+                                                <p>Все категории</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('categoryen.create') }}" class="nav-link">
+                                                <p>Добавить категорию</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                      
 
                     </ul>
                 </nav>
